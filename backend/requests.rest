@@ -1,0 +1,42 @@
+POST http://localhost:3000/api/user
+content-type: application/json
+
+{
+  "userName": "devTest",
+  "userEmail": "email@Test",
+  "userPassword": "passwordTest"
+}
+
+###
+
+POST http://localhost:3000/api/auth/login
+content-type: application/json
+
+{
+  "email": "email@Test",
+  "password": "passwordTest"
+}
+
+
+###
+GET http://localhost:3000/api/user
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMGE0ZjBiYjktNDMwMS00MGU3LWI4MjUtYjQxZGM3OGMwNmE5IiwidXNlcl9uYW1lIjoiZGV2VGVzdCIsInVzZXJfZW1haWwiOiJlbWFpbFRlc3QiLCJpYXQiOjE3NDE0NTEzODQsImV4cCI6MTc0MTQ1MTQwNH0.l3VjjsjLvojO3uM2rJqRD3wDeV3GY0HmJlWH0ZkLRpc
+
+###
+GET http://localhost:3000/api/sport
+
+###
+DELETE http://localhost:3000/api/auth/refresh_token
+
+###
+POST http://localhost:3000/api/event/create
+content-type: application/json
+
+{
+  "event_name": "Tournoi test",
+  "terrain_id": 4147,
+  "user_id": "5eaadc11-6646-4099-aafd-beecb6120868",
+  "event_date": "2026-02-01 12:00:00",
+  "max_player": 6,
+  "player": 0
+}
